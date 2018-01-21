@@ -1,2 +1,2 @@
 # secondspirngmvcspringjdbczsgc
-maven+springmvc+springjdbc+add/del/update/list/pagelist
+maven+jetty+springmvc+springjdbc+add/del/update/list/pagelist

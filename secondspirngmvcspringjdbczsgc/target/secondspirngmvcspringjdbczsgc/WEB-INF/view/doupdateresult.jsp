@@ -24,7 +24,7 @@
 	<div class="zw">
 		<div class="pianzuo"><a href="<%=contextpath%>">返回首页</a></div>
 		<div class="kh"></div>
-		${event_id}已删除
+		ID为${event_id} 内容为${title} 修改成功！
 	</div>
 </div>
 

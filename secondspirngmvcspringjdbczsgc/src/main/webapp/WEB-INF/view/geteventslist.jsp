@@ -10,6 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="maven,jetty,springmvc,springjdbc,onetalbe,add/del/update/list/pagelist">
 <title></title>
 
 

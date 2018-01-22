@@ -10,10 +10,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="maven,jetty,springmvc,springjdbc,onetalbe,add/del/update/list/pagelist">
 <title></title>
 
 
 <link href="assets/css/css1.css" rel="stylesheet" type="text/css"/>
+
+<%
+ String contextpath = request.getContextPath();
+%>
 
 </head>
 
@@ -22,8 +27,9 @@
 <div class="container">
 	<div class="kh"></div>
 	<div class="zw">
-		查询列表
+		<div class="pianzuo"><a href="<%=contextpath%>">返回首页</a></div>
 		<div class="kh"></div>
+		<div class="juzhong">查询列表</div>
 
 		<div class="liebiaochang">
 			<c:forEach var="item" items="${list}">

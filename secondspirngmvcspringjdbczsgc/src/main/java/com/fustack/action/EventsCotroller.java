@@ -25,6 +25,11 @@ public class EventsCotroller {
 	public String Index(Model model) {
 		return "index";
 	}
+
+	@RequestMapping("/index")
+	public String Index1(Model model) {
+		return "index";
+	}	
 	
 	@RequestMapping("/addevents")
 	public String addEvents(Model model) {

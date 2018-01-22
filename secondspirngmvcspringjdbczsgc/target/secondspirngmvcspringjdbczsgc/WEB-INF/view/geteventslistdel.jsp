@@ -5,16 +5,20 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
     
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title></title>
-<link href="assets/css/css1.css" type="text/css" rel="stylesheet"/>
+
+
+<link href="assets/css/css1.css" rel="stylesheet" type="text/css"/>
+
 <%
  String contextpath = request.getContextPath();
 %>
+
 </head>
 
 <body>
@@ -24,8 +28,16 @@
 	<div class="zw">
 		<div class="pianzuo"><a href="<%=contextpath%>">返回首页</a></div>
 		<div class="kh"></div>
-		${event_id}已删除
+		<div class="juzhong">查询列表</div>
+
+		<div class="liebiaochang">
+			<c:forEach var="item" items="${list}">
+				${item.title}&nbsp;&nbsp;<a href="dodeleteevents?event_id=${item.event_id}">删除</a></br>
+			</c:forEach>
+		</div>
+
 	</div>
+
 </div>
 
 </body>

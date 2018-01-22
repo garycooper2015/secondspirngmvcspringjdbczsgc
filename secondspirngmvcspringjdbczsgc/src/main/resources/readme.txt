@@ -3,6 +3,8 @@
 首页
 http://localhost:8080/secondspirngmvcspringjdbczsgc/
 
+http://localhost:8080/secondspirngmvcspringjdbczsgc/index
+
 增
 http://localhost:8080/secondspirngmvcspringjdbczsgc/addevents
 
@@ -21,6 +23,19 @@ http://localhost:8080/secondspirngmvcspringjdbczsgc/geteventslist
 分页列表
 http://localhost:8080/secondspirngmvcspringjdbczsgc/geteventlistbypage
 
+服务器首页
+http://www.itluosiding.com/secondspirngmvcspringjdbczsgc/
+
+http://www.itluosiding.com:8080/secondspirngmvcspringjdbczsgc/
+
+
+http://www.itluosiding.com:8080/secondspirngmvcspringjdbczsgc/index
+
+
+http://www.itluosiding.com/secondspirngmvcspringjdbczsgc/addevents
+
+
+http://www.itluosiding.com/secondspirngmvcspringjdbczsgc/geteventlistbypage
 
 
 

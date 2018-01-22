@@ -10,8 +10,30 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="maven,jetty,springmvc,springjdbc,onetalbe,add/del/update/list/pagelist">
 <title></title>
 <link href="assets/css/css1.css" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript">
+
+ <!-- 回车跳转页功能-->
+ function jumppage(){
+	 var e = window.event || arguments.callee.caller.arguments[0];
+	 if(e.keyCode == 13){
+		 var number = document.getElementById("page").value;
+		 if(isNaN(number)){ <!-- 如果是真表明不是数字，如果是假表明是数字-->
+			 
+		 }else{
+			 location.href="geteventlistbypage?page=" + number;
+		 }
+		 
+	 }
+ }
+</script>
+
+<%
+ String contextpath = request.getContextPath();
+%>
 
 </head>
 
@@ -20,10 +42,12 @@
 <div class="container">
 	<div class="kh"></div>
 	<div class="zw">
-		测试列表
+		<div class="pianzuo"><a href="<%=contextpath%>">返回首页</a></div>
 		<div class="kh"></div>
+		<div class="juzhong">分页列表</div>
 		
 		<div class="liebiao">
+		
 			<c:forEach var="item" items="${list}">
 				${item.title}<br/>
 			</c:forEach>
@@ -36,6 +60,7 @@
 		<c:forEach var="i" begin="1" end="${pages}" step="1">   
 			<a href="geteventlistbypage?page=<c:out value="${i}"/>"><c:out value="${i}" /></a>
 		</c:forEach>
+		&nbsp;&nbsp;跳转到<input type="text" value="" id="page" size="4px" onkeydown="jumppage();"/>页
 	</c:if>	
 		
 	</div>

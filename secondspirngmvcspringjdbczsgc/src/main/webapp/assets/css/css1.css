@@ -4,7 +4,7 @@ body{
 	margin:0px;
 	padding:0px;
 	font-family:"微软雅黑";
-	background-color:#F2EFE6;
+	background-color:#f7f7f9;
 }
 
 a{text-decoration:none;}
@@ -23,7 +23,7 @@ a{text-decoration:none;}
 	margin:0 auto;
 	text-align:center;
 	font-size:18px;
-	border:1px solid red;	
+/*	border:1px solid red;	*/
 }
 
 .kh{

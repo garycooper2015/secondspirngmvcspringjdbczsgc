@@ -34,7 +34,7 @@
 			</div>
 		</div>
 		<div class="a7">
-			maven+jetty+springmvc+springjdbc+onetalbe+add/del/update/list/pagelist
+			maven+jetty+springmvc+springjdbc+onetable+add/del/update/list/pagelist
 		</div>
 		
 		<div class="kh"></div>

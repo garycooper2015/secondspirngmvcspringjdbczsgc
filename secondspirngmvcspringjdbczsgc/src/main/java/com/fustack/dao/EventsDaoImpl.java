@@ -27,21 +27,19 @@ public class EventsDaoImpl implements EventsDao {
 
 	/**
 	 * 添加并返id
-	 * @param sql
-	 * @param args
-	 * @return
 	 */
-	public long addEvents(final Events bean) {
+	public long addEvents(Events bean) {
 		// TODO Auto-generated method stub
 		// this.jdbTemplate.update("",bean.getTitle());
 
 		final String sql = "insert into events(event_date,title) values(now(),?)";
+		final String s1 = bean.getTitle();
 
 		KeyHolder keyHolder = new GeneratedKeyHolder();
 		this.jdbcTemplate.update(new PreparedStatementCreator() {
 			public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
 				PreparedStatement ps = connection.prepareStatement(sql, new String[] { "id" });
-				ps.setString(1, bean.getTitle());
+				ps.setString(1,s1);
 				return ps;
 			}
 		}, keyHolder);

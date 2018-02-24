@@ -67,7 +67,9 @@ public class EventsDaoImpl implements EventsDao {
 	public Events getEvents(Events bean) {
 		// TODO Auto-generated method stub
 		
-		Events events = this.jdbcTemplate.queryForObject("select * from events where event_id = ? ", new Object[] {bean.getEvent_id()},new EventsMapper());
+		Events events = new Events();
+				
+		events	= this.jdbcTemplate.queryForObject("select * from events where event_id = ? ", new Object[] {bean.getEvent_id()},new EventsMapper());
 		
 		return events;
 	}

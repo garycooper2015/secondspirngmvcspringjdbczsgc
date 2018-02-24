@@ -21,7 +21,7 @@
 	 var e = window.event || arguments.callee.caller.arguments[0];
 	 if(e.keyCode == 13){
 		 var number = document.getElementById("page").value;
-		 if(isNaN(number)){ <!-- 如果是真表明不是数字，如果是假表明是数字-->
+		 if(isNaN(number)){ /* 如果是真表明不是数字，如果是假表明是数字*/
 			 
 		 }else{
 			 location.href="geteventlistbypage?page=" + number;

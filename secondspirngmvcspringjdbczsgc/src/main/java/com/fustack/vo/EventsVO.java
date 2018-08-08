@@ -1,5 +1,7 @@
 package com.fustack.vo;
 
+
+
 public class EventsVO {
 	public String event_id;
 	

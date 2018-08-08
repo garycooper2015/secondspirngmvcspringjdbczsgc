@@ -2,6 +2,7 @@ com/fustack/action/EventsCotroller.class
 com/fustack/dao/EventsDao.class
 com/fustack/po/Events.class
 com/fustack/dao/EventsDaoImpl$EventsMapper.class
+com/fustack/util/test/vo/VO1.class
 com/fustack/service/EventsService.class
 com/fustack/service/EventsServiceImpl.class
 com/fustack/dao/EventsDaoImpl.class

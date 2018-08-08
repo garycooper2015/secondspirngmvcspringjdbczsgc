@@ -2,12 +2,12 @@ package com.fustack.action;
 
 import java.util.List;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.fustack.po.Events;
 import com.fustack.service.EventsService;
@@ -41,12 +41,19 @@ public class EventsCotroller {
 	public String doaddEvents(@ModelAttribute("events") EventsVO events, Model model) {
 		Events bean = new Events();
 		
-		bean.setTitle(events.getTitle());
+		
+		//bean.setTitle(events.getTitle());
+		
+		BeanUtils.copyProperties(events,bean);
 		
 		long event_id = service.addEvents(bean);
 		
-		model.addAttribute("title",events.getTitle());
-		model.addAttribute("event_id",event_id);
+		events.setEvent_id(String.valueOf(event_id));
+		
+		model.addAttribute("event",events);
+		
+//		model.addAttribute("title",events.getTitle());
+//		model.addAttribute("event_id",event_id);
 		
 		return "addeventsresult";
 	}

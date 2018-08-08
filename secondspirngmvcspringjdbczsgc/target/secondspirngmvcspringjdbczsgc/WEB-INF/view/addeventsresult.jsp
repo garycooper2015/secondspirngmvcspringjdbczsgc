@@ -24,7 +24,7 @@
 	<div class="zw">
 		<div class="pianzuo"><a href="<%=contextpath%>">返回首页</a></div>
 		<div class="kh"></div>
-		ID为${event_id} 内容为${title} 添加成功！
+		ID为${event.event_id} 内容为${event.title} 添加成功！
 	</div>
 </div>
 
